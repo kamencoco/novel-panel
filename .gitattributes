@@ -1,0 +1,6 @@
+* text=auto
+*.bat -text
+*.png binary
+*.ico binary
+*.lib binary
+*.dll binary

@@ -1,0 +1,42 @@
+# 构建产物
+third_party/webview2/WebView2LoaderStatic.lib
+third_party/webview2/libWebView2Loader.a
+*.o
+*.obj
+*.res
+*.exe
+*.pdb
+*.ilk
+dist/
+build/
+
+# 本地备份 / 截图 / 素材
+_backup/
+_pre_bundle_backup/
+_pre_ux_backup/
+_shots/
+_downloads/
+_preview/
+
+# 一次性开发脚本（改样式/改文案时用的临时补丁与调试脚本，不入库）
+src/patch_*.js
+src/debug_*.js
+src/test_*.js
+src/diag_*.js
+src/compare_*.js
+src/check_*.js
+src/append_*.js
+src/gen_*.js
+src/gen_*.py
+src/gen_*.ps1
+src/make_ico.js
+src/rename_app.js
+src/shot*.ps1
+src/uia_*.ps1
+src/smoke.cpp
+src/smoke.o
+
+# 系统
+Thumbs.db
+desktop.ini
+.DS_Store

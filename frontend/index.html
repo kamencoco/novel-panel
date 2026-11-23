@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="glass">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>金手指 · 系统文创作工作台</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="grain" aria-hidden="true"></div>
+<div id="motes" aria-hidden="true"></div>
+
+<!-- 书架 -->
+<div id="shelf" hidden>
+  <header class="shelf-head">
+    <div class="shelf-brand">金手指</div>
+    <div class="shelf-actions">
+      <button class="ghost iconbtn" id="btnHelp" title="使用说明"></button>
+      <button class="ghost iconbtn" id="shelfTheme" title="切换深浅色"></button>
+    </div>
+  </header>
+  <div class="shelf-body">
+    <div id="shelfHero" class="hero-box" hidden>
+      <div class="hero-brand">金 手 指</div>
+      <h1>构建你的系统面板。</h1>
+      <p class="hero-sub">每一章一份快照，新章自动继承；也可以直接动笔写正文。</p>
+      <input id="heroTitle" placeholder="作品名称，如：凡人修仙录" spellcheck="false">
+      <button id="heroCreate" class="cta hero-cta">开始创作</button>
+    </div>
+    <div id="shelfGrid" class="shelf-grid" hidden></div>
+  </div>
+</div>
+
+<!-- 主界面 -->
+<div id="app" hidden>
+  <aside id="sidebar">
+    <div class="brand-block">
+      <button id="btnBackShelf" class="book-switcher" title="返回书架">
+        <span class="bs-chev"></span>
+        <span id="bsTitle" class="bs-title">书架</span>
+      </button>
+      <div class="side-icons">
+        <button class="ghost iconbtn" id="btnHelp2" title="使用说明"></button>
+        <button class="ghost iconbtn" id="btnTheme" title="切换深浅色"></button>
+        <button class="ghost iconbtn" id="btnSettings" title="设置"></button>
+      </div>
+    </div>
+    <div class="side-label">目录</div>
+    <ul id="chapterTree"></ul>
+    <button id="btnAddChapter" class="cta"><span class="ico"></span>新建章节</button>
+  </aside>
+
+  <main id="main">
+    <header id="chHeader">
+      <div class="ch-meta">
+        <span>第</span><span class="no" id="chNo">1</span><span>章</span>
+        <input id="chTitle" placeholder="本章标题…" spellcheck="false">
+      </div>
+      <div class="ch-actions">
+        <span id="wordCount"></span>
+        <span id="saveState"></span>
+        <button class="ghost iconbtn" id="btnPreviewToggle" title="显示/隐藏面板"></button>
+        <button class="ghost" id="btnCopy"><span class="ico"></span>复制面板</button>
+      </div>
+    </header>
+
+    <div id="editorScroll"><textarea id="editor" placeholder="开始写这一章的正文……&#10;&#10;💡 Ctrl+S 保存 · Ctrl+↑↓ 切章节 · Alt+B 面板" spellcheck="false"></textarea></div>
+  </main>
+
+  <aside id="preview">
+    <div class="pv-head"><span>本章面板 <span id="pvChar" class="pv-char"></span></span><span id="pvCh"></span><button class="ghost iconbtn" id="btnPvClose" title="收起面板"></button></div>
+    <div id="charTabs" class="char-tabs"></div>
+    <div id="fieldsScroll"><div id="fieldsWrap"></div></div>
+  </aside>
+</div>
+
+<div id="modalRoot"></div>
+<div id="toast"></div>
+<script src="core.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
